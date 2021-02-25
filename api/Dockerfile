@@ -8,4 +8,4 @@ WORKDIR /service
 COPY . /service
 
 
-CMD ["python", "api/main.py"]
+CMD ["python", "main.py"]
