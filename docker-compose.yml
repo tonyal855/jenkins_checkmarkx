@@ -4,6 +4,6 @@ services:
   api-service:
     build: ./api
     volumes:
-      - ./api-service:/service
+      - .:/service
     ports:
       - 5001:5001
