@@ -3,7 +3,5 @@ version : '3'
 services:
   api-service:
     build: ./api
-    volumes:
-      - .:/service
     ports:
       - 5001:5001
