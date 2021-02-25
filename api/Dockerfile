@@ -4,4 +4,4 @@ RUN mkdir -p /service
 WORKDIR /service
 COPY . /service
 
-CMD ["python", "service/main.py"]
+CMD ["python", "service/api/main.py"]
