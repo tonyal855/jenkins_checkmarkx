@@ -1,7 +1,7 @@
 FROM python:3.7-slim-buster
 
-RUN mkdir -p /api/service
-WORKDIR /api/service
-COPY . /api/service
+RUN mkdir -p /service
+WORKDIR /service
+COPY . /service
 
 CMD ["python", "main.py"]
