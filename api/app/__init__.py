@@ -3,7 +3,7 @@ from flask_jwt_extended import JWTManager,create_access_token, create_refresh_to
 import os
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:''@172.20.0.1/isl_db'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:''@localhost/isl_db'
 # app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:''@127.0.0.1/isl_db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 jwt = JWTManager(app)
