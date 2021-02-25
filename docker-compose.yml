@@ -5,3 +5,4 @@ services:
     build: ./api
     ports:
       - 5001:8000
+    network_mode: host
