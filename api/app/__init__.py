@@ -1,11 +1,17 @@
 from flask import Flask
 from flask_jwt_extended import JWTManager,create_access_token, create_refresh_token, jwt_required,fresh_jwt_required, jwt_refresh_token_required, get_jwt_identity, get_raw_jwt
 import os
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:''@192.168.1.7/isl_db'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:user@db:3306/isl_db'
 # app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:''@127.0.0.1/isl_db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
+
+db = SQLAlchemy(app)
+
+
 jwt = JWTManager(app)
 JWT_SECRET_KEY = str(os.environ.get("JWT_SECRET"))
 app.config['SECRET_KEY'] = 'NoSecret'
